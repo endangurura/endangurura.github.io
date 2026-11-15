@@ -5,7 +5,7 @@ I work on scalable oversight, research auditing, and the reliability of AI-assis
 - [Home](https://endangurura.github.io/)
 - [Articles](https://endangurura.github.io/articles/)
 
-## Can local models spot sabotaged research?
+## Can local models detect sabotaged research?
 
 - [Article](https://endangurura.github.io/auditing-sabotage-bench/)
 - [Technical report](https://endangurura.github.io/auditing-sabotage-bench/report/)
