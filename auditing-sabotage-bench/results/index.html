@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Results | Emmanuel Ndangurura</title><meta name="description" content="Detection and report-completeness results for three locally served research auditors."><link rel="canonical" href="https://endangurura.github.io/auditing-sabotage-bench/results/"><meta property="og:title" content="Results"><meta property="og:description" content="Detection and report-completeness results for three locally served research auditors."><meta property="og:type" content="article"><meta property="og:url" content="https://endangurura.github.io/auditing-sabotage-bench/results/"><meta property="og:image" content="https://endangurura.github.io/assets/figures/paper_only_detection.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/site.css"></head>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/">Emmanuel Ndangurura</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/auditing-sabotage-bench/">Article</a><a href="/auditing-sabotage-bench/report/">Report</a><a href="/auditing-sabotage-bench/results/" aria-current="page">Results</a><a href="/auditing-sabotage-bench/corrections/">Corrections</a></nav></header><div class="layout"><main id="main"><details class="mobile-toc"><summary>On this page</summary><ul><li><a href="#paper-only-auditing">Paper-only auditing</a></li><li><a href="#code-access-auditing">Code-access auditing</a></li><li><a href="#benchmark-accepted-fixes">Benchmark-accepted fixes</a></li><li><a href="#interpretation-and-data">Interpretation and data</a></li></ul></details><article><h1 id="results">Results</h1>
+<h2 id="paper-only-auditing">Paper-only auditing</h2>
+<p>Five trials per variant, 28 variants, nine source codebases. AUROC is codebase-weighted after averaging valid probabilities in logit space.</p>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Research results table"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Valid / attempted trial reports</th>
+<th>AUROC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gpt-oss-120b</code></td>
+<td>138/140</td>
+<td>0.448</td>
+</tr>
+<tr>
+<td><code>qwen3.8-27b</code></td>
+<td>140/140</td>
+<td>0.423</td>
+</tr>
+<tr>
+<td><code>mistral-small-4-119b</code></td>
+<td>140/140</td>
+<td>0.468</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="/assets/figures/paper_only_detection.png" alt="Paper-only AUROC estimates and exploratory uncertainty across nine codebases." loading="lazy" decoding="async" /></p>
+<p>Intervals are exploratory 95% percentile intervals from 10,000 codebase bootstrap resamples, seed 42. Nine clusters provide limited precision.</p>
+<h2 id="code-access-auditing">Code-access auditing</h2>
+<div class="table-wrap" tabindex="0" role="region" aria-label="Research results table"><table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Condition</th>
+<th>Usable trial reports</th>
+<th>AUROC on available reports</th>
+<th>Trial policy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gpt-oss-120b</code></td>
+<td>Restricted access</td>
+<td>20/20</td>
+<td>0.481</td>
+<td>one trial per variant</td>
+</tr>
+<tr>
+<td><code>gpt-oss-120b</code></td>
+<td>Full experiments</td>
+<td>19/20</td>
+<td>0.448</td>
+<td>one trial per variant</td>
+</tr>
+<tr>
+<td><code>qwen3.8-27b</code></td>
+<td>Restricted access</td>
+<td>18/20</td>
+<td>0.575</td>
+<td>one-trial set with missing-report retries</td>
+</tr>
+<tr>
+<td><code>qwen3.8-27b</code></td>
+<td>Full experiments</td>
+<td>9/20</td>
+<td>0.667</td>
+<td>one-trial set with missing-report retries</td>
+</tr>
+<tr>
+<td><code>mistral-small-4-119b</code></td>
+<td>Restricted access</td>
+<td>10/100</td>
+<td>0.433</td>
+<td>five-trial patched rerun</td>
+</tr>
+<tr>
+<td><code>mistral-small-4-119b</code></td>
+<td>Full experiments</td>
+<td>4/100</td>
+<td>0.000</td>
+<td>five-trial patched rerun</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="/assets/figures/report_coverage.png" alt="Report coverage after corrected runs and missing-report retries." loading="lazy" decoding="async" /></p>
+<p>All code conditions target 20 variants. The Mistral denominator is 100 trial reports, not 100 distinct cases. Qwen combines valid original answers with recovered answers for previously missing cases. These are not directly comparable first-attempt completion rates.</p>
+<h2 id="benchmark-accepted-fixes">Benchmark-accepted fixes</h2>
+<p>Qwen achieved weighted top-1 fix credit of 33.3% with restricted code access and 11.1% with full experiments available. Accepted cases covered sandbagging detection, subliminal learning, and multi-turn jailbreaking. Full credit follows the benchmark's criterion: address the sabotage and correctly explain its mechanism.</p>
+<p><img src="/assets/figures/accepted_fixes.png" alt="Qwen received benchmark-accepted top-1 fix credit in both code-access settings." loading="lazy" decoding="async" /></p>
+<p>These successes demonstrate useful local-model alignment-auditing behavior. They motivate testing whether targeted fine-tuning and stronger elicitation can make accepted fixes more consistent and economical; those interventions and cost ratios were not measured here.</p>
+<h2 id="interpretation-and-data">Interpretation and data</h2>
+<p>Missing reports are not imputed as 50%. Conditional scores on small observed subsets do not establish a model ranking or an effect of experiment access.</p>
+<p>The paper-only and initial code-access aggregates were recomputed from published corrected entry tables. The final Mistral and Qwen follow-ups use the experiment summaries and were not separately reaggregated from per-trial tables.</p>
+<p><a href="/assets/data/results_summary.json">Download aggregate data</a> · <a href="/auditing-sabotage-bench/report/">Read the methods</a> · <a href="/auditing-sabotage-bench/corrections/">See corrections</a></p>
+</article></main><aside class="rail"><h2>On this page</h2><ul><li><a href="#paper-only-auditing">Paper-only auditing</a></li><li><a href="#code-access-auditing">Code-access auditing</a></li><li><a href="#benchmark-accepted-fixes">Benchmark-accepted fixes</a></li><li><a href="#interpretation-and-data">Interpretation and data</a></li></ul><div class="tools"><a href="/assets/documents/Auditing_Sabotage_Bench_Local_Models_Technical_Report.pdf">Download technical report</a><a href="/auditing-sabotage-bench/branches/">Experiment branches</a><a href="https://github.com/endangurura/auditing-sabotage-bench">Replication code</a></div></aside></div><footer class="site-footer"><span>Research notes by Emmanuel Ndangurura</span><span><a href="https://github.com/endangurura">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/endangurura/">LinkedIn</a> &nbsp; <a href="/auditing-sabotage-bench/branches/">Sources and branches</a></span></footer></body></html>

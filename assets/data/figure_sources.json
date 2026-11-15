@@ -1,0 +1,11 @@
+{
+  "historical_figure": {
+    "source": "https://github.com/endangurura/auditing-sabotage-bench/blob/8326a9bfd4b7526dec56e4e49e6260e7f952a286/results/figures/blue_team_performance_a.png",
+    "status": "historical; superseded scoring and legend labels; not current evidence",
+    "sha256": "ac038fc50532afc1cc3c13ce6d413681a63f47bd6ec5fcf390a46e78ee3b7ed4"
+  },
+  "corrected_figures": {
+    "source": "pinned corrected audit tables and final experiment summaries",
+    "data": "/assets/data/results_summary.json"
+  }
+}
