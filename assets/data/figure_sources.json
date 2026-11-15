@@ -3,7 +3,7 @@
   "data": "/assets/data/results_summary.json",
   "figures": {
     "paper_only_detection.png": "f1803955dddda2fb6612176fe424184f03056c41c0ec350fe17d2208d92f6e8f",
-    "report_coverage.png": "fecc4e0b3d61054f1251a7333d61fbe64291382bf341dfa896049251b97ed48c",
+    "report_coverage.png": "8d835a6a8377f7e72e0d401bf62aecda4863ace2e57777e57abf6e2265982ebc",
     "accepted_fixes.png": "0bcda5f4f57473b07b17134c9e036612e7fca39de14f9b2344fd12e3565c6d9e"
   }
 }
