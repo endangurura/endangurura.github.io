@@ -1,76 +1,74 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Experiment branches and sources | Emmanuel Ndangurura</title><meta name="description" content="Public branch lineage for the local-model Auditing Sabotage Bench replication."><link rel="canonical" href="https://endangurura.github.io/auditing-sabotage-bench/branches/"><meta property="og:title" content="Experiment branches and sources"><meta property="og:description" content="Public branch lineage for the local-model Auditing Sabotage Bench replication."><meta property="og:type" content="article"><meta property="og:url" content="https://endangurura.github.io/auditing-sabotage-bench/branches/"><meta property="og:image" content="https://endangurura.github.io/assets/figures/paper_only_detection.png"><meta name="twitter:card" content="summary_large_image"><link rel="stylesheet" href="/assets/site.css"></head>
-<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/">Emmanuel Ndangurura</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/auditing-sabotage-bench/">Article</a><a href="/auditing-sabotage-bench/report/">Report</a><a href="/auditing-sabotage-bench/results/">Results</a><a href="/auditing-sabotage-bench/corrections/">Corrections</a></nav></header><div class="layout"><main id="main"><details class="mobile-toc"><summary>On this page</summary><ul><li><a href="#which-results-to-read">Which results to read</a></li></ul></details><article><h1 id="replication-branch-map">Replication branch map</h1>
-<p>Public fork: <a href="https://github.com/endangurura/auditing-sabotage-bench">endangurura/auditing-sabotage-bench</a>.
-Branch tips checked on 15 November 2026.
-The names are <code>exp/lab-*</code>, not <code>lab/exp-*</code>.</p>
+<body><a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="/">Emmanuel Ndangurura</a><nav aria-label="Main navigation"><a href="/">Home</a><a href="/articles/" aria-current="page">Articles</a></nav></header><nav class="project-nav" aria-label="Auditing Sabotage Bench"><a href="/auditing-sabotage-bench/">Article</a><a href="/auditing-sabotage-bench/report/">Report</a><a href="/auditing-sabotage-bench/results/">Results</a><a href="/auditing-sabotage-bench/methods/">Methods</a><a href="/auditing-sabotage-bench/branches/" aria-current="page">Sources</a></nav><div class="layout"><main id="main"><details class="mobile-toc"><summary>On this page</summary><ul><li><a href="#results-and-method">Results and method</a></li></ul></details><article><h1 id="experiment-branches">Experiment branches</h1>
+<p><a href="https://github.com/endangurura/auditing-sabotage-bench">Replication repository</a>.
+The default branch is <code>lab</code>; the experiment branches separate the observation settings and model runs.</p>
 <div class="table-wrap" tabindex="0" role="region" aria-label="Research results table"><table>
 <thead>
 <tr>
 <th>Branch</th>
-<th>Role in this replication</th>
-<th>Reviewed tip</th>
+<th>Research scope</th>
+<th>Research revision</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/lab"><code>lab</code></a></td>
-<td>Default branch; shared local-model integration and experiment setup. Not automatically the newest corrected result set</td>
+<td>Shared local-model replication; experiment baseline</td>
 <td><code>9fdfdfb</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/lab-paper-only"><code>exp/lab-paper-only</code></a></td>
-<td>Exploratory paper-only experiment snapshot</td>
+<td>Paper-only auditing</td>
 <td><code>8326a9b</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/lab-no-experiments"><code>exp/lab-no-experiments</code></a></td>
-<td>Initial GPT-OSS restricted code-access snapshot</td>
+<td>GPT-OSS restricted code access</td>
 <td><code>7f59b5a</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/lab-full-experiments"><code>exp/lab-full-experiments</code></a></td>
-<td>Initial GPT-OSS full-experiments attempt with a generic environment; diagnostic, not the final dependency-matched condition</td>
+<td>GPT-OSS full-experiments condition with a generic environment</td>
 <td><code>5b0ea1c</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/lab-full-experiments-deps"><code>exp/lab-full-experiments-deps</code></a></td>
-<td>GPT-OSS full-experiments snapshot with codebase-specific dependencies</td>
+<td>GPT-OSS full experiments with codebase-specific dependencies</td>
 <td><code>4946ac8</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/lab-mistral-code"><code>exp/lab-mistral-code</code></a></td>
-<td>Initial Mistral code-access experiment snapshots</td>
+<td>Mistral code-access conditions</td>
 <td><code>f343b2f</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/lab-qwen-code"><code>exp/lab-qwen-code</code></a></td>
-<td>Initial Qwen code-access experiment snapshots</td>
+<td>Qwen code-access conditions</td>
 <td><code>ae41faa</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/audit-repair"><code>exp/audit-repair</code></a></td>
-<td>Offline extraction, grouping, missing-data, and retry corrections; published corrected entry tables</td>
+<td>Scoring analysis and entry-level result tables</td>
 <td><code>0230a56</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/exp/rerun5"><code>exp/rerun5</code></a></td>
-<td>Patched capture and five-trial rerun preparation/results, including the published 28-variant paper-only run</td>
+<td>Five-trial evaluation, including the 28-variant paper-only set</td>
 <td><code>e882dcc</code></td>
 </tr>
 <tr>
 <td><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/main"><code>main</code></a></td>
-<td>Original benchmark reference retained separately from our replication documentation</td>
+<td>Original benchmark, paper, and citation</td>
 <td><code>f8efd68</code></td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="which-results-to-read">Which results to read</h2>
-<p>The <a href="/auditing-sabotage-bench/report/">technical report</a> and <a href="/assets/data/results_summary.json">aggregate data</a> include the final Mistral reruns and Qwen retry merges completed through 6 November.
-The public branch tips above have not all advanced to those final summaries.
-The <a href="https://github.com/endangurura/auditing-sabotage-bench/tree/0230a56319bbbb40cbaf852038f89469302c0071/results/audit/outputs/20261102-5ep">pinned correction tables</a> independently support the paper-only and corrected initial code-access aggregates, not every final follow-up entry.</p>
-<p>An experiment branch can contain historical figures or intermediate results.
-Its existence does not mean every raw log or the latest correction is committed there.
-Use the <a href="/auditing-sabotage-bench/corrections/">correction record</a> before interpreting older plots or headlines.
-The older <code>exp/lab-paper-only-figures</code> URL is obsolete and is not part of this map.</p>
-</article></main><aside class="rail"><h2>On this page</h2><ul><li><a href="#which-results-to-read">Which results to read</a></li></ul><div class="tools"><a href="/assets/documents/Auditing_Sabotage_Bench_Local_Models_Technical_Report.pdf">Download technical report</a><a href="/auditing-sabotage-bench/branches/">Experiment branches</a><a href="https://github.com/endangurura/auditing-sabotage-bench">Replication code</a></div></aside></div><footer class="site-footer"><span>Research notes by Emmanuel Ndangurura</span><span><a href="https://github.com/endangurura">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/endangurura/">LinkedIn</a> &nbsp; <a href="/auditing-sabotage-bench/branches/">Sources and branches</a></span></footer></body></html>
+<h2 id="results-and-method">Results and method</h2>
+<ul>
+<li><a href="/auditing-sabotage-bench/report/">Technical report</a></li>
+<li><a href="/assets/data/results_summary.json">Aggregate results</a></li>
+<li><a href="/auditing-sabotage-bench/methods/">Evaluation method</a></li>
+<li><a href="https://github.com/endangurura/auditing-sabotage-bench/tree/0230a56319bbbb40cbaf852038f89469302c0071/results/audit/outputs/20261102-5ep">Published entry-level tables</a></li>
+</ul>
+</article></main><aside class="rail"><h2>On this page</h2><ul><li><a href="#results-and-method">Results and method</a></li></ul><div class="tools"><a href="/assets/documents/Auditing_Sabotage_Bench_Local_Models_Technical_Report.pdf">Download technical report</a><a href="/auditing-sabotage-bench/branches/">Experiment branches</a><a href="https://github.com/endangurura/auditing-sabotage-bench">Replication code</a></div></aside></div><footer class="site-footer"><span><a href="https://github.com/endangurura">GitHub</a> &nbsp; <a href="https://www.linkedin.com/in/endangurura/">LinkedIn</a></span></footer></body></html>

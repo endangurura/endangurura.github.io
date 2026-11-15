@@ -1,11 +1,9 @@
 {
-  "historical_figure": {
-    "source": "https://github.com/endangurura/auditing-sabotage-bench/blob/8326a9bfd4b7526dec56e4e49e6260e7f952a286/results/figures/blue_team_performance_a.png",
-    "status": "historical; superseded scoring and legend labels; not current evidence",
-    "sha256": "ac038fc50532afc1cc3c13ce6d413681a63f47bd6ec5fcf390a46e78ee3b7ed4"
-  },
-  "corrected_figures": {
-    "source": "pinned corrected audit tables and final experiment summaries",
-    "data": "/assets/data/results_summary.json"
+  "source": "https://github.com/endangurura/auditing-sabotage-bench/tree/0230a56319bbbb40cbaf852038f89469302c0071/results/audit/outputs/20261102-5ep",
+  "data": "/assets/data/results_summary.json",
+  "figures": {
+    "paper_only_detection.png": "f1803955dddda2fb6612176fe424184f03056c41c0ec350fe17d2208d92f6e8f",
+    "report_coverage.png": "fecc4e0b3d61054f1251a7333d61fbe64291382bf341dfa896049251b97ed48c",
+    "accepted_fixes.png": "0bcda5f4f57473b07b17134c9e036612e7fca39de14f9b2344fd12e3565c6d9e"
   }
 }
